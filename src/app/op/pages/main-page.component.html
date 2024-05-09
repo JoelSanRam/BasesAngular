@@ -1,0 +1,15 @@
+<h1>One piece</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <h4>Listado</h4>
+    <app-list (onDelteCharacterByID)="onDeleteCharacter($event)" [characterList]="characters"></app-list>
+  </div>
+  <div class="col">
+    <form class="row">
+      <h4>Agregar personaje</h4>
+      <app-add-character (onNewCharacter)="onAddCharacter($event)" ></app-add-character>
+    </form>
+  </div>
+</div>

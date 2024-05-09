@@ -1,0 +1,16 @@
+<h1>{{name}}</h1>
+
+<dl>
+  <td>Nombre</td>
+  <dd>{{name}}</dd>
+  <td>Edad</td>
+  <dd>{{age}}</dd>
+  <td>Método</td>
+  <dd>{{heroDescription()}}</dd>
+  <td>Método</td>
+  <dd>{{capitalizeName}}</dd>
+</dl>
+
+<button *ngIf="name !== 'Araragi' && age !== 21" (click)="changeData()" class="btn btn-primary mx-2">Araragi</button>
+<button *ngIf="name !== 'Luffy' && age !== 19" (click)="changeData2()" class="btn btn-danger mx-2">Luffy</button>
+<button (click)="changeData3()" class="btn btn-dark mx-2">Reset</button>

@@ -1,0 +1,22 @@
+<h3 class="text-danger" *ngIf="validationDelete; else nadaBorrado">El borrado fue: {{eliminado | json}}</h3>
+<ng-template #nadaBorrado>
+  <h3 class="text-info">No se ha borrado nada</h3>
+</ng-template>
+
+<button (click)="eliminar()" *ngIf="heroes.length > 0" class="btn btn-danger mx-2">Borrar el último</button>
+<button (click)="reset()" class="btn btn-primary mx-2">Reset</button>
+
+<ul class="my-2 list-group">
+  <div class="row" *ngFor="let hero of heroes">
+    <div class="col-md-6">
+      <li class="list-group-item">
+        {{ hero.name }}
+      </li>
+    </div>
+    <div class="col-md-6">
+      <li class="list-group-item">
+        {{ hero.anime }}
+      </li>
+    </div>
+  </div>
+</ul>
